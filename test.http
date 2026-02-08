@@ -1,0 +1,20 @@
+### Obtener todos los pacientes
+GET http://localhost:5154/api/Pacientes
+
+### Crear un paciente
+POST http://localhost:5154/api/Pacientes
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "cedula": "12345678",
+  "fechaNacimiento": "1990-05-15",
+  "telefono": "555-1234",
+  "email": "juan@email.com",
+  "direccion": "Calle Principal 123",
+  "numeroHistoriaClinica": "HC-001"
+}
+
+### Obtener un paciente específico
+GET http://localhost:5154/api/Pacientes/1
