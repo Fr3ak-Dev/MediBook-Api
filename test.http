@@ -1,3 +1,5 @@
+### ========== PACIENTES ==========
+
 ### Obtener todos los pacientes
 GET http://localhost:5154/api/Pacientes
 
@@ -18,3 +20,81 @@ Content-Type: application/json
 
 ### Obtener un paciente específico
 GET http://localhost:5154/api/Pacientes/1
+
+### Actualizar un paciente
+PUT http://localhost:5154/api/Pacientes/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nombre": "Juan Carlos",
+  "apellido": "Pérez García",
+  "cedula": "12345678",
+  "fechaNacimiento": "1990-05-15",
+  "telefono": "555-9999",
+  "email": "juancarlos@email.com",
+  "direccion": "Avenida Principal 456",
+  "numeroHistoriaClinica": "HC-001"
+}
+
+### Eliminar un paciente
+DELETE http://localhost:5154/api/Pacientes/1
+
+### ========== ESPECIALIDADES ==========
+
+### Obtener todas las especialidades
+GET http://localhost:5154/api/Especialidades
+
+### Crear una especialidad
+POST http://localhost:5154/api/Especialidades
+Content-Type: application/json
+
+{
+  "nombre": "Cardiología",
+  "descripcion": "Especialidad médica que se ocupa de las enfermedades del corazón"
+}
+
+### Crear otra especialidad
+POST http://localhost:5154/api/Especialidades
+Content-Type: application/json
+
+{
+  "nombre": "Pediatría",
+  "descripcion": "Especialidad médica que estudia al niño y sus enfermedades"
+}
+
+### ========== MEDICOS ==========
+
+### Obtener todos los médicos
+GET http://localhost:5154/api/Medicos
+
+### Crear un médico
+POST http://localhost:5154/api/Medicos
+Content-Type: application/json
+
+{
+  "nombre": "Ana",
+  "apellido": "García",
+  "cedula": "98765432",
+  "telefono": "555-5678",
+  "email": "ana.garcia@hospital.com",
+  "especialidadId": 1
+}
+
+### ========== CITAS ==========
+
+### Obtener todas las citas
+GET http://localhost:5154/api/Citas
+
+### Crear una cita
+POST http://localhost:5154/api/Citas
+Content-Type: application/json
+
+{
+  "pacienteId": 1,
+  "medicoId": 1,
+  "fechaHora": "2026-02-15T10:00:00",
+  "motivo": "Control general",
+  "estado": "Pendiente",
+  "observaciones": "Primera consulta"
+}
