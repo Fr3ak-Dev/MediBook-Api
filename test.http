@@ -8,14 +8,14 @@ POST http://localhost:5154/api/Pacientes
 Content-Type: application/json
 
 {
-  "nombre": "Juan",
-  "apellido": "Pérez",
-  "cedula": "12345678",
-  "fechaNacimiento": "1990-05-15",
-  "telefono": "555-1234",
-  "email": "juan@email.com",
-  "direccion": "Calle Principal 123",
-  "numeroHistoriaClinica": "HC-001"
+  "nombre": "Andres",
+  "apellido": "Alvarez",
+  "cedula": "12345672",
+  "fechaNacimiento": "1992-02-12",
+  "telefono": "555-1222",
+  "email": "andresa@email.com",
+  "direccion": "Calle Principal 122",
+  "numeroHistoriaClinica": "HC-002"
 }
 
 ### Obtener un paciente específico
